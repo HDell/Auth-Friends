@@ -16,8 +16,7 @@ const Friend = (props) => {
         e.preventDefault();
         axiosWithAuth().delete('api/friends/'+props.id)
             .then((res) => {
-                console.log(res.data);
-                window.location.reload(false);
+                props.setFriends(res.data);
             })
             .catch((err) => console.log(err));
     };

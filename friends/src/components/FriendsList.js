@@ -69,7 +69,7 @@ const FriendsList = (props) => {
         <div>
             <button onClick={clearStorage}>Logout</button>
             {friends.map(friend => (
-                <Friend name={friend.name} age={friend.age} email={friend.email} id={friend.id}/>
+                <Friend name={friend.name} age={friend.age} email={friend.email} id={friend.id} setFriends={setFriends}/>
             ))}
             <form onSubmit={handleSubmit}>
                 <input
